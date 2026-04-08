@@ -54,7 +54,7 @@ OpenCode (github.com/anomalyco/opencode, branch: dev) is the primary reference. 
 - `packages/opencode/src/session/message-v2.ts` — message types and filterCompacted
 - `packages/opencode/src/session/overflow.ts` — overflow detection
 
-Fork at patrickmvla/opencode (not cloned locally).
+Fork at patrickmvla/opencode. Cloned locally at `/home/mvula/audhd/opencode` (dev branch, shallow clone). Use `Read` tool to study source files directly.
 
 ## Architecture Summary
 
