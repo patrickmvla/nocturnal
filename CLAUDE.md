@@ -8,14 +8,21 @@ Not a toy. Not a tutorial. Not a wrapper. Every decision is documented. Every li
 
 ## Current Status
 
-All architecture and documentation is complete. Phase 1 (first message in, first response out) is next.
+**Check `STATUS.md` first.** It tracks the active phase, what's done, and what's next. It is updated at the end of every conversation.
 
-- 7 ADRs accepted (docs/adrs/)
-- System architecture RFC revised after challenging against OpenCode's actual source (docs/rfc/)
-- 7-phase implementation plan ready (docs/implementation/plan.md)
-- Repo live at patrickmvla/nocturnal
+Each phase is built in a fresh conversation. At the start of a new conversation, read `STATUS.md` to know exactly where to pick up.
 
 ## How We Work
+
+### On AI Limitations
+
+You are an LLM. You operate on next-token prediction, not reasoning. Your context degrades even with a 1M token window. You hallucinate. You drift. You produce shallow output when context gets noisy. These are not insults — they are engineering constraints to design around.
+
+The documentation structure in this project IS the mitigation strategy. STATUS.md, CLAUDE.md, ADRs, and the RFC exist so you can recover from context loss between conversations. Fresh conversations per phase exist because you WILL degrade over long sessions. The discipline isn't optional — it compensates for your limitations.
+
+When you don't know something, say so. When your output starts getting generic or shallow, flag it — that's a signal context is degrading. Never confabulate. Never pretend confidence you don't have. Patrick knows what you are. Work with that honestly and the output will be at a level most teams never reach.
+
+### On Engineering Discipline
 
 **Patrick must understand every line.** After completing each phase, do not move to the next until he confirms he understands everything — the logic, the data flow, every line of code, and why it's written that way. The more questions he asks, the better. If he isn't asking questions, stop and say: "wtf are you doing man — ask me something, we don't move on until this clicks."
 
